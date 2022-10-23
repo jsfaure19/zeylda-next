@@ -19,8 +19,114 @@ a {
   html {
     color-scheme: dark;
   }
+
   body {
     color: white;
     background: black;
   }
+}
+
+.heartbeat {
+  -webkit-animation: heartbeat 1.5s ease-in-out infinite both;
+  animation: heartbeat 1.5s ease-in-out infinite both
+}
+
+@-webkit-keyframes heartbeat {
+  from {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out
+  }
+
+  10% {
+    -webkit-transform: scale(.91);
+    transform: scale(.91);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in
+  }
+
+  17% {
+    -webkit-transform: scale(.98);
+    transform: scale(.98);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out
+  }
+
+  33% {
+    -webkit-transform: scale(.87);
+    transform: scale(.87);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in
+  }
+
+  45% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out
+  }
+}
+
+@keyframes heartbeat {
+  from {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out
+  }
+
+  10% {
+    -webkit-transform: scale(.91);
+    transform: scale(.91);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in
+  }
+
+  17% {
+    -webkit-transform: scale(.98);
+    transform: scale(.98);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out
+  }
+
+  33% {
+    -webkit-transform: scale(.87);
+    transform: scale(.87);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in
+  }
+
+  45% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out
+  }
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Wbz";
+  src: url("/wbz.otf");
+}
+
+.transform-fade-down-enter-active,
+.transform-fade-down-leave-active {
+  @apply transition-all translate-y-0 duration-300;
+}
+
+.transform-fade-down-enter,
+.transform-fade-down-leave-to
+
+/* .fade-leave-active below version 2.1.8 */
+  {
+  @apply opacity-0 transform -translate-y-2;
 }

@@ -1,8 +1,36 @@
 import '../styles/globals.css'
 import type { AppProps } from 'next/app'
+import { Header } from '../components/Header'
+import React, { useEffect, useState } from 'react'
+import Head from 'next/head'
+import '../styles/bubble.css';
 
 function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  return (
+    <React.Fragment>
+      <Head>
+        <title>Zeylda Stream</title>
+        <link rel="icon" href="/navy.png" />
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet"></link>
+      </Head>
+      <div className=''>
+        <Hydrated>
+          <Component {...pageProps} />
+        </Hydrated>
+      </div>
+    </React.Fragment>
+  )
 }
 
 export default MyApp
+
+const Hydrated = ({ children }: { children?: any }) => {
+  const [hydration, setHydration] = useState(false);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      setHydration(true);
+    }
+  }, []);
+  return hydration ? children : ''
+}; 
