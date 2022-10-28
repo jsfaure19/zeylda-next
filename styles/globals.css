@@ -31,6 +31,11 @@ a {
   animation: heartbeat 1.5s ease-in-out infinite both
 }
 
+.planning-png {
+  transition: transform .2s;
+  /* Animation */
+}
+
 @-webkit-keyframes heartbeat {
   from {
     -webkit-transform: scale(1);
@@ -116,6 +121,11 @@ a {
 @font-face {
   font-family: "Wbz";
   src: url("/wbz.otf");
+}
+
+@font-face {
+  font-family: "Twitch";
+  src: url("/twitch.otf");
 }
 
 .transform-fade-down-enter-active,

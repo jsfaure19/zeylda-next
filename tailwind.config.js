@@ -8,10 +8,12 @@ module.exports = {
     extend: {
       backgroundImage: {
         'tb': "url('../images/background/tavern_brawl.png')",
-        'numenor': "url('../images/background/numenor.jpg')"
+        'replay': "url('../images/background/replay.png')",
+        'twitch': "url('../images/background/twitch.png')",
       },
       fontFamily: {
         wbz: ['Wbz'],
+        twitch: ['Twitch'],
       },
     },
   },
