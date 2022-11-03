@@ -1,12 +1,10 @@
 import Image from 'next/future/image'
 import navy from "../public/navy.png";
 import { Link, animateScroll as scroll } from "react-scroll";
-import { link } from 'fs';
 const navigation = [
   { name: 'Home', to: '/' },
   { name: 'Le stream', to: 'the-stream' },
   { name: 'Replays', to: "replays" },
-  { name: 'World of Warcraft', to: 'wow' },
   { name: 'Moderateurs', to: 'moderator' },
   { name: 'Wishlist', to: 'https://www.amazon.fr/hz/wishlist/ls/QQ1CJ21WHSMG?ref_=wl_share' },
 ]
@@ -25,9 +23,9 @@ export function Header() {
             <div className="ml-10 hidden space-x-8 sm:block nav-items">
               {navigation.map((link, index) => {
                 if (link.name === 'Wishlist') {
-                  return <a key={index} href={link.to} target='_blank' className='cursor-pointer nav-item text-2xl font-medium text-white hover:text-indigo-600'>{link.name}</a>
+                  return <a key={index} href={link.to} target='_blank' className='cursor-pointer nav-item text-2xl font-medium text-slate-200 hover:text-slate-800'>{link.name}</a>
                 } else {
-                  return <Link key={index} className="cursor-pointer nav-item text-2xl font-medium text-white hover:text-indigo-600"
+                  return <Link key={index} className="cursor-pointer nav-item text-2xl font-medium text-slate-200 hover:text-slate-800"
                     to={link.to}
                     spy={true}
                     smooth={true}
@@ -39,15 +37,19 @@ export function Header() {
             </div>
           </div>
         </div>
-        <div className="flex flex-wrap justify-center space-x-2 py-4 sm:hidden nav-items">
-          {navigation.map((link) => (
-            <Link key={link.name} className="active nav-item text-xl mb-2 font-medium text-white hover:text-indigo-600"
-              to={link.to}
-              spy={true}
-              smooth={true}
-              offset={0}
-              duration={500} >{link.name}</Link>
-          ))}
+        <div className="flex flex-wrap space-x-2 sm:hidden nav-items">
+          {navigation.map((link, index) => {
+            if (link.name === 'Wishlist') {
+              return <a key={index} href={link.to} target='_blank' className='cursor-pointer nav-item text-sm font-medium text-slate-200 hover:text-slate-800'>{link.name}</a>
+            } else {
+              return <Link key={link.name} className="text-sm cursor-pointer nav-item mb-2 font-medium text-slate-200 hover:text-indigo-600"
+                to={link.to}
+                spy={true}
+                smooth={true}
+                offset={0}
+                duration={500} >{link.name}</Link>
+            }
+          })}
         </div>
       </nav>
     </header >

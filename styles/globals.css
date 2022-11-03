@@ -119,13 +119,18 @@ a {
 @tailwind utilities;
 
 @font-face {
-  font-family: "Wbz";
-  src: url("/wbz.otf");
+  font-family: "Twitch";
+  src: url("/twitch.otf");
 }
 
 @font-face {
-  font-family: "Twitch";
-  src: url("/twitch.otf");
+  font-family: "Nature";
+  src: url("/nature.ttf");
+}
+
+@font-face {
+  font-family: "Basic";
+  src: url("/basic.ttf");
 }
 
 .transform-fade-down-enter-active,
