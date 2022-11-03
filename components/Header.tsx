@@ -16,14 +16,14 @@ export function Header() {
       <nav className="max-w-7xl px-4 sm:px-6 lg:px-8" aria-label="Top">
         <div className="flex w-full items-center justify-center sm:justify-between py-6">
           <div className="sm:flex items-center hidden">
-            <a href="/">
+            <div>
               <span className="sr-only">La taverne de Zeylda</span>
               <Image className="h-10 w-auto" src={navy} alt="" />
-            </a>
+            </div>
             <div className="ml-10 hidden space-x-8 sm:block nav-items">
               {navigation.map((link, index) => {
                 if (link.name === 'Wishlist') {
-                  return <a key={index} href={link.to} target='_blank' className='cursor-pointer nav-item text-2xl font-medium text-slate-200 hover:text-slate-800'>{link.name}</a>
+                  return <a key={index} href={link.to} target='_blank' rel="noreferrer" className='cursor-pointer nav-item text-2xl font-medium text-slate-200 hover:text-slate-800'>{link.name}</a>
                 } else {
                   return <Link key={index} className="cursor-pointer nav-item text-2xl font-medium text-slate-200 hover:text-slate-800"
                     to={link.to}
@@ -40,7 +40,7 @@ export function Header() {
         <div className="flex flex-wrap space-x-2 sm:hidden nav-items">
           {navigation.map((link, index) => {
             if (link.name === 'Wishlist') {
-              return <a key={index} href={link.to} target='_blank' className='cursor-pointer nav-item text-sm font-medium text-slate-200 hover:text-slate-800'>{link.name}</a>
+              return <a key={index} href={link.to} target='_blank' rel="noreferrer" className='cursor-pointer nav-item text-sm font-medium text-slate-200 hover:text-slate-800'>{link.name}</a>
             } else {
               return <Link key={link.name} className="text-sm cursor-pointer nav-item mb-2 font-medium text-slate-200 hover:text-indigo-600"
                 to={link.to}

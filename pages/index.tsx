@@ -145,7 +145,7 @@ const Home: NextPage = () => {
                 <div className="mx-auto mt-5 sm:flex sm:justify-center md:mt-8">
                   {socialNetworks.map((sn, index) => (
                     <div key={index} className="mx-2 my-2 rounded-md sd:shadow">
-                      <a href={sn.href} target="_blank" className='justify-center heartbeat'>
+                      <a href={sn.href} target="_blank" rel="noreferrer" className='justify-center heartbeat'>
                         <button type="button" className={sn.color + " w-44 inline-flex items-center rounded-md border border-transparent px-6 py-3 text-xl lg:text-2xl font-medium text-slate-200 shadow-sm hover:bg-opacity-60 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"}>
                           <i className={sn.icon + ' mr-2'}></i>
                           <span className='flex'>
@@ -225,7 +225,7 @@ const Home: NextPage = () => {
             <p className="text-center text-4xl font-semibold text-slate-200">Mes derniers streams</p>
             <div className="flex items-center flex-col mt-6 lg:mt-8 font-sans">
               {lastVideos && lastVideos.map((el, index) => (
-                <a key={index} href={el.url} target="_blank" className="opacity-90 w-full my-4 flex flex-row md:items-center bg-white rounded-lg border shadow-md md:flex-row md:w-3/4 hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+                <a key={index} href={el.url} target="_blank" rel="noreferrer" className="opacity-90 w-full my-4 flex flex-row md:items-center bg-white rounded-lg border shadow-md md:flex-row md:w-3/4 hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
                   <Image className="opacity-100 sd:object-cover h-auto w-36 rounded-t-lg rounded-bl-lg md:h-auto md:w-48 md:rounded-none md:rounded-l-lg" src={el.image_url} width={800} height={800} alt="" />
                   <div className="flex flex-col justify-between p-4 leading-normal">
                     <h5 className="mb-2 md:text-xl font-bold tracking-tight text-gray-900 dark:text-white">{el.title}</h5>
@@ -245,7 +245,7 @@ const Home: NextPage = () => {
               </div>
               <ul role="list" className="mx-auto space-y-16 sm:grid sm:grid-cols-2 sm:gap-16 sm:space-y-0 lg:max-w-5xl lg:grid-cols-3">
                 {moderators.map((moderator, index) => (
-                  <li>
+                  <li key={index}>
                     <div className="space-y-6">
                       <Image className="mx-auto h-40 w-40 rounded-full xl:h-56 xl:w-56" src={moderator.avatar} alt="" />
                       <div className="space-y-2">
