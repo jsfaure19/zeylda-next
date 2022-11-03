@@ -129,7 +129,7 @@ const Home: NextPage = () => {
           <div className='absolute top-0 left-0 w-full h-full'>
             <div className='h-full flex flex-col justify-center items-center'>
               <div className='bg-slate-700 bg-opacity-80 rounded-3xl py-4 lg:py-8 px-4 my-4'>
-                <h1 className="text-4xl lg:text-5xl font-bold tracking-tight text-gray-900 ">
+                <h1 className="text-xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-gray-900 ">
                   <span className="block xl:inline text-slate-200">Hellooooow ! </span>
                   <span className="block text-slate-200 xl:inline">Bienvenue dans la taverne !</span>
                 </h1>
@@ -237,19 +237,19 @@ const Home: NextPage = () => {
           </div>
         </div>
         {/* Modos */}
-        <div id="moderator" className="h-screen w-screen bg-cover bg-no-repeat bg-slate-900">
-          <div className="mx-auto max-w-7xl py-12 px-4 text-center sm:px-6 lg:px-8 lg:py-24">
+        <div id="moderator" className="h-screen w-screen bg-cover bg-slate-900">
+          <div className="mx-auto py-12 px-4 text-center sm:px-6 lg:px-8 lg:py-24">
             <div className="space-y-12">
               <div className="space-y-5 sm:mx-auto sm:max-w-xl sm:space-y-4 lg:max-w-5xl">
-                <h2 className="text-5xl font-nature tracking-tight sm:text-4xl">Les modérateurs</h2>
+                <h2 className="text-3xl font-nature tracking-tight sm:text-4xl">Les modérateurs</h2>
               </div>
-              <ul role="list" className="mx-auto space-y-16 sm:grid sm:grid-cols-2 sm:gap-16 sm:space-y-0 lg:max-w-5xl lg:grid-cols-3">
+              <ul role="list" className="mx-auto grid grid-cols-2 sm:gap-16 lg:max-w-5xl lg:grid-cols-3">
                 {moderators.map((moderator, index) => (
-                  <li key={index}>
+                  <li key={index} className='mt-12'>
                     <div className="space-y-6">
-                      <Image className="mx-auto h-40 w-40 rounded-full xl:h-56 xl:w-56" src={moderator.avatar} alt="" />
+                      <Image className="mx-auto h-20 sm:h-40 w-20 sm:w-40 rounded-full" src={moderator.avatar} alt="" />
                       <div className="space-y-2">
-                        <div className="space-y-1 font-nature text-3xl font-medium leading-6">
+                        <div className="space-y-1 font-nature text-xl sd:text-3xl font-medium leading-6">
                           <h3>{moderator.name}</h3>
                         </div>
                       </div>
