@@ -134,11 +134,11 @@ const Home: NextPage = () => {
                   <span className="block text-slate-200 xl:inline">Bienvenue dans la taverne !</span>
                 </h1>
                 <p className="text-start mx-auto font-basic mt-3 max-w-md text-lg sm:text-xl text-slate-200 md:mt-5 md:max-w-4xl lg:text-2xl">
-                  Je suis Zeylda, passionnée par les jeux vidéos depuis le plus jeune age. J'aime partager mon univers, qui est fait de fantaisie, d'humour, de bonne humeur et d'un brin de folie
+                  Je suis Zeylda, passionnée par les jeux vidéos depuis le plus jeune age. J&apos;aime partager mon univers, qui est fait de fantaisie, d&apos;humour, de bonne humeur et d&apos;un brin de folie
                   <br />
                   Mon rêve est de pouvoir streamer à plein temps, et je compte bien y arriver !
                   <br />
-                  Je joue principalement à World of Warcraft cependant j'aime m'aventurer sur d'autres styles de jeu.
+                  Je joue principalement à World of Warcraft cependant j&apos;aime m&apos;aventurer sur d&apos;autres styles de jeu.
                   <br />
                   Je stream en general cinq fois par semaine.
                 </p>
