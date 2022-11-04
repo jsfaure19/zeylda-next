@@ -1,6 +1,6 @@
 import '../styles/globals.css'
 import type { AppProps } from 'next/app'
-import { Header } from '../components/Header'
+import { Analytics } from '@vercel/analytics/react';
 import React, { useEffect, useState } from 'react'
 import Head from 'next/head'
 import '../styles/bubble.css';
@@ -16,6 +16,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <div className=''>
         <Hydrated>
           <Component {...pageProps} />
+          <Analytics />
         </Hydrated>
       </div>
     </React.Fragment>

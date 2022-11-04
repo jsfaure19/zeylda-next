@@ -124,7 +124,7 @@ const Home: NextPage = () => {
         {/* home */}
         <div className="text-center relative w-screen h-screen font-nature">
           <video className='w-full h-full object-cover' autoPlay muted >
-            <source src='/hobbit.mp4' />
+            <source src='/hobbit720.mp4' />
           </video>
           <div className='absolute top-0 left-0 w-full h-full'>
             <div className='h-full flex flex-col justify-center items-center'>
