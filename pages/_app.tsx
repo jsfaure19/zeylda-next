@@ -13,7 +13,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <link rel="icon" href="/navy.png" />
         <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet"></link>
       </Head>
-      <div className='tracking-wide'>
+      <div className=''>
         <Hydrated>
           <Component {...pageProps} />
           <Analytics />

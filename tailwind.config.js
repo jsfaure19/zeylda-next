@@ -19,6 +19,9 @@ module.exports = {
         nature: ['Nature'],
         neon: ['Neon']
       },
+      scale: {
+        '130': '1.30',
+      }
     },
   },
   plugins: [
