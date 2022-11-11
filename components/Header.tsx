@@ -3,7 +3,7 @@ import navy from "../public/navy.png";
 import { Link, animateScroll as scroll } from "react-scroll";
 const navigation = [
   { name: 'Home', to: '/' },
-  { name: 'Le stream', to: 'the-stream' },
+  { name: 'Planning', to: 'the-stream' },
   { name: 'Replays', to: "replays" },
   { name: 'Moderateurs', to: 'moderator' },
   { name: 'Wishlist', to: 'https://www.amazon.fr/hz/wishlist/ls/QQ1CJ21WHSMG?ref_=wl_share' },
