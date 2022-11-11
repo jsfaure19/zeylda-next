@@ -39,9 +39,9 @@ const Home: NextPage = () => {
     { icon: "ri-youtube-fill", href: "https://www.youtube.com/channel/UCQnE0xuiOMGw95tZrNOdzsw", title: 'Youtube', color: 'bg-red-600' },
   ]
   const moderators = [
-    { name: "Petitsablet", avatar: require('../images/moderators/sabli.png') },
+    { name: "Petitsablet", avatar: require('../images/moderators/sabli.gif') },
     { name: "Jahno", avatar: require('../images/moderators/korin.gif') },
-    { name: "Fafafox", avatar: require('../images/moderators/fafa.png') },
+    { name: "Fafafox", avatar: require('../images/moderators/fafa.gif') },
     { name: "Devilman", avatar: require('../images/moderators/devil.jpg') },
     { name: "Cailloux", avatar: require('../images/moderators/cailloux.gif') },
   ]
@@ -186,7 +186,7 @@ const Home: NextPage = () => {
           </div>
         </div>
         {/* stats and planning */}
-        <div id='the-stream' className='font-nature bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 h-screen w-screen'>
+        <div id='the-stream' className='font-nature bg-twitch h-screen w-screen'>
           {/* planning */}
           <div id="planning" className="mx-auto py-4 px-4 sm:px-6 lg:px-8 sd:h-1/2">
             <div className="mx-auto max-w-4xl text-center">
@@ -237,11 +237,11 @@ const Home: NextPage = () => {
           </div>
         </div>
         {/* Modos */}
-        <div id="moderator" className="h-screen w-screen bg-cover bg-slate-900">
+        <div id="moderator" className="h-screen w-screen bg-cover bg-slate-900 font-neon">
           <div className="mx-auto py-12 px-4 text-center sm:px-6 lg:px-8 lg:py-24">
             <div className="space-y-12">
               <div className="space-y-5 sm:mx-auto sm:max-w-xl sm:space-y-4 lg:max-w-5xl">
-                <h2 className="text-3xl font-nature tracking-tight sm:text-4xl">Les modérateurs</h2>
+                <h2 className="text-3xl tracking-tight sm:text-6xl neonText">Les modérateurs</h2>
               </div>
               <ul role="list" className="mx-auto grid grid-cols-2 sm:gap-16 lg:max-w-5xl lg:grid-cols-3">
                 {moderators.map((moderator, index) => (
@@ -249,7 +249,7 @@ const Home: NextPage = () => {
                     <div className="space-y-6">
                       <Image className="mx-auto h-20 sm:h-40 w-20 sm:w-40 rounded-full" src={moderator.avatar} alt="" />
                       <div className="space-y-2">
-                        <div className="space-y-1 font-nature text-xl sd:text-3xl font-medium leading-6">
+                        <div className="space-y-1 text-3xl sd:text-3xl font-medium leading-6 neonText">
                           <h3>{moderator.name}</h3>
                         </div>
                       </div>

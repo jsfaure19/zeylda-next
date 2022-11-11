@@ -26,6 +26,11 @@ a {
   }
 }
 
+.neonText {
+  color: #fff;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #FFA500, 0 0 20px #FFA500, 0 0 25px #FFA500, 0 0 30px #FFA500, 0 0 35px #FFA500;
+}
+
 .heartbeat {
   -webkit-animation: heartbeat 1.5s ease-in-out infinite both;
   animation: heartbeat 1.5s ease-in-out infinite both
@@ -131,6 +136,11 @@ a {
 @font-face {
   font-family: "Basic";
   src: url("/basic.ttf");
+}
+
+@font-face {
+  font-family: "Neon";
+  src: url("/neon.ttf");
 }
 
 .transform-fade-down-enter-active,
