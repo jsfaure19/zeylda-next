@@ -140,7 +140,7 @@ const Home: NextPage = () => {
                   <br />
                   Je joue principalement à World of Warcraft cependant j&apos;aime m&apos;aventurer sur d&apos;autres styles de jeu.
                   <br />
-                  Je stream en general cinq fois par semaine.
+                  Je stream en général cinq fois par semaine.
                 </p>
                 <div className="mx-auto mt-5 sm:flex sm:justify-center md:mt-8">
                   {socialNetworks.map((sn, index) => (
@@ -186,7 +186,7 @@ const Home: NextPage = () => {
           </div>
         </div>
         {/* stats and planning */}
-        <div id='the-stream' className='font-nature bg-twitch h-screen w-screen'>
+        <div id='the-stream' className='font-nature bg-twitch bg-cover bg-no-repeat h-screen w-screen'>
           {/* planning */}
           <div id="planning" className="mx-auto py-4 px-4 sm:px-6 lg:px-8 sd:h-1/2">
             <div className="mx-auto max-w-4xl text-center">
@@ -204,7 +204,7 @@ const Home: NextPage = () => {
               </div>
               <dl className="mt-10 text-center sm:mx-auto sm:grid sm:max-w-3xl sm:grid-cols-3 sm:gap-8">
                 <div className="flex flex-col">
-                  <dt className="order-2 mt-2 text-lg font-medium leading-6 text-slate-200">Nombre total de vue</dt>
+                  <dt className="order-2 mt-2 text-lg font-medium leading-6 text-slate-200">Nombre total de vues</dt>
                   <dd className="font-serif order-1 text-2xl lg:text-3xl font-bold tracking-tight text-slate-200">{totalView}</dd>
                 </div>
                 <div className="mt-10 flex flex-col sm:mt-0">
