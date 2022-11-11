@@ -133,6 +133,11 @@ a {
   src: url("/basic.ttf");
 }
 
+@font-face {
+  font-family: "Basic";
+  src: url("/basic2.otf");
+}
+
 .transform-fade-down-enter-active,
 .transform-fade-down-leave-active {
   @apply transition-all translate-y-0 duration-300;

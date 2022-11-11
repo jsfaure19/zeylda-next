@@ -122,145 +122,168 @@ const Home: NextPage = () => {
     <div className=''>
       <main className="mx-auto">
         {/* home */}
-        <div className="text-center relative w-screen h-screen font-nature">
-          <video className='w-full h-full object-cover' autoPlay muted >
-            <source src='/hobbit720.mp4' />
-          </video>
-          <div className='absolute top-0 left-0 w-full h-full'>
-            <div className='h-full flex flex-col justify-center items-center'>
-              <div className='bg-slate-700 bg-opacity-80 rounded-3xl py-4 lg:py-8 px-4 my-4'>
-                <h1 className="text-xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-gray-900 ">
-                  <span className="block xl:inline text-slate-200">Hellooooow ! </span>
-                  <span className="block text-slate-200 xl:inline">Bienvenue dans la taverne !</span>
-                </h1>
-                <p className="text-start mx-auto font-basic mt-3 max-w-md text-lg sm:text-xl text-slate-200 md:mt-5 md:max-w-4xl lg:text-2xl">
-                  Je suis Zeylda, passionnée par les jeux vidéos depuis le plus jeune age. J&apos;aime partager mon univers, qui est fait de fantaisie, d&apos;humour, de bonne humeur et d&apos;un brin de folie
-                  <br />
-                  Mon rêve est de pouvoir streamer à plein temps, et je compte bien y arriver !
-                  <br />
-                  Je joue principalement à World of Warcraft cependant j&apos;aime m&apos;aventurer sur d&apos;autres styles de jeu.
-                  <br />
-                  Je stream en general cinq fois par semaine.
-                </p>
-                <div className="mx-auto mt-5 sm:flex sm:justify-center md:mt-8">
-                  {socialNetworks.map((sn, index) => (
-                    <div key={index} className="mx-2 my-2 rounded-md sd:shadow">
-                      <a href={sn.href} target="_blank" rel="noreferrer" className='justify-center heartbeat'>
-                        <button type="button" className={sn.color + " w-44 inline-flex items-center rounded-md border border-transparent px-6 py-3 text-xl lg:text-2xl font-medium text-slate-200 shadow-sm hover:bg-opacity-60 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"}>
-                          <i className={sn.icon + ' mr-2'}></i>
-                          <span className='flex'>
-                            <span className="font-basic -mt-2">{sn.title}</span>
-                            {sn.title === 'Mon live' && status === 'live' &&
-                              <div id="center-div">
-                                <div className="bubble">
-                                  <span className="bubble-outer-dot">
-                                    <span className="bubble-inner-dot"></span>
-                                  </span>
+        {false &&
+          <div className="text-center relative w-screen h-screen font-nature">
+            <video className='w-full h-full object-cover' autoPlay muted >
+              <source src='/hobbit720.mp4' />
+            </video>
+            <div className='absolute top-0 left-0 w-full h-full'>
+              <div className='h-full flex flex-col justify-center items-center'>
+                <div className='bg-slate-700 bg-opacity-80 rounded-3xl py-4 lg:py-8 px-4 my-4'>
+                  <h1 className="text-xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-gray-900 ">
+                    <span className="block xl:inline text-slate-200">Hellooooow ! </span>
+                    <span className="block text-slate-200 xl:inline">Bienvenue dans la taverne !</span>
+                  </h1>
+                  <p className="text-start mx-auto font-basic mt-3 max-w-md text-lg sm:text-xl text-slate-200 md:mt-5 md:max-w-4xl lg:text-2xl">
+                    Je suis Zeylda, passionnée par les jeux vidéos depuis le plus jeune age. J&apos;aime partager mon univers, qui est fait de fantaisie, d&apos;humour, de bonne humeur et d&apos;un brin de folie
+                    <br />
+                    Mon rêve est de pouvoir streamer à plein temps, et je compte bien y arriver !
+                    <br />
+                    Je joue principalement à World of Warcraft cependant j&apos;aime m&apos;aventurer sur d&apos;autres styles de jeu.
+                    <br />
+                    Je stream en general cinq fois par semaine.
+                  </p>
+                  <div className="mx-auto mt-5 sm:flex sm:justify-center md:mt-8">
+                    {socialNetworks.map((sn, index) => (
+                      <div key={index} className="mx-2 my-2 rounded-md sd:shadow">
+                        <a href={sn.href} target="_blank" rel="noreferrer" className='justify-center heartbeat'>
+                          <button type="button" className={sn.color + " w-44 inline-flex items-center rounded-md border border-transparent px-6 py-3 text-xl lg:text-2xl font-medium text-slate-200 shadow-sm hover:bg-opacity-60 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"}>
+                            <i className={sn.icon + ' mr-2'}></i>
+                            <span className='flex'>
+                              <span className="font-basic -mt-2">{sn.title}</span>
+                              {sn.title === 'Mon live' && status === 'live' &&
+                                <div id="center-div">
+                                  <div className="bubble">
+                                    <span className="bubble-outer-dot">
+                                      <span className="bubble-inner-dot"></span>
+                                    </span>
+                                  </div>
                                 </div>
-                              </div>
-                            }
-                          </span>
-                        </button>
-                      </a>
-                    </div>
-                  ))}
+                              }
+                            </span>
+                          </button>
+                        </a>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
+            <div className='absolute top-0 text-slate-200'>
+              <Header />
+            </div>
+            <div className="absolute bottom-10 left-0 sm:animate-bounce w-full h-40">
+              <div className='mt-2 h-full flex flex-col justify-end items-center text-4xl sm:text-6xl text-white cursor-pointer'>
+                <Link activeClass="active"
+                  to="planning"
+                  spy={true}
+                  smooth={true}
+                  offset={0}
+                  duration={500}
+                >
+                  <i className="ri-arrow-down-circle-fill"></i>
+                </Link>
+              </div>
+            </div>
           </div>
-          <div className='absolute top-0 text-slate-200'>
-            <Header />
-          </div>
-          <div className="absolute bottom-10 left-0 sm:animate-bounce w-full h-40">
-            <div className='mt-2 h-full flex flex-col justify-end items-center text-4xl sm:text-6xl text-white cursor-pointer'>
-              <Link activeClass="active"
-                to="planning"
-                spy={true}
-                smooth={true}
-                offset={0}
-                duration={500}
-              >
-                <i className="ri-arrow-down-circle-fill"></i>
-              </Link>
+        }
+        <div className="h-screen w-screen bg-prepare bg-cover text-center">
+          <div className='absolute top-10 left-0 w-full h-full'>
+            <div className='h-full flex flex-col justify-center items-center'>
+              <div className='bg-slate-700 bg-opacity-80 rounded-3xl py-4 lg:py-8 px-4 my-4'>
+                <h1 className="text-xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-gray-900 ">
+                  <span className="block xl:inline text-slate-200 font-basic2 tracking-wide">Jahno travaille dur !</span>
+                  <span className="block text-slate-200 xl:inline"></span>
+                </h1>
+                <p className="text-start mx-auto font-basic2 mt-3 max-w-md text-lg sm:text-xl text-slate-200 md:mt-5 md:max-w-4xl lg:text-2xl tracking-wide">
+                  Rendez-vous ce soir à 20h30 sur www.zeylda.fr
+                </p>
+              </div>
             </div>
           </div>
         </div>
         {/* stats and planning */}
-        <div id='the-stream' className='font-nature bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 h-screen w-screen'>
-          {/* planning */}
-          <div id="planning" className="mx-auto py-4 px-4 sm:px-6 lg:px-8 sd:h-1/2">
-            <div className="mx-auto max-w-4xl text-center">
-              <h2 className="text-3xl pt-10 font-bold tracking-tight text-white sm:text-4xl">Planning</h2>
-            </div>
-            <div className="mt-4 lg:mt-20 mx-auto max-w-3xl">
-              <Image className="h-full w-full rounded-3xl lg:hover:scale-125 planning-png" src={planning} alt="" />
-            </div>
-          </div>
-          {/* stats */}
-          <div id="stat" className="h-1/2 sd:h-1/3">
-            <div className="mx-auto px-4 sm:py-1 sm:px-6 lg:px-8">
+        {false &&
+          <div id='the-stream' className='font-nature bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 h-screen w-screen'>
+            {/* planning */}
+            <div id="planning" className="mx-auto py-4 px-4 sm:px-6 lg:px-8 sd:h-1/2">
               <div className="mx-auto max-w-4xl text-center">
-                <h2 className="text-xl font-bold tracking-tight text-white sm:text-3xl">Le stream en chiffre !</h2>
+                <h2 className="text-3xl pt-10 font-bold tracking-tight text-white sm:text-4xl">Planning</h2>
               </div>
-              <dl className="mt-10 text-center sm:mx-auto sm:grid sm:max-w-3xl sm:grid-cols-3 sm:gap-8">
-                <div className="flex flex-col">
-                  <dt className="order-2 mt-2 text-lg font-medium leading-6 text-slate-200">Nombre total de vue</dt>
-                  <dd className="font-serif order-1 text-2xl lg:text-3xl font-bold tracking-tight text-slate-200">{totalView}</dd>
-                </div>
-                <div className="mt-10 flex flex-col sm:mt-0">
-                  <dt className="order-2 mt-2 text-lg font-medium leading-6 text-slate-200">Nombre total de followers</dt>
-                  <dd className="font-serif order-1 text-2xl lg:text-3xl font-bold tracking-tight text-slate-200">{totalFollower}</dd>
-                </div>
-                <div className="mt-10 flex flex-col sm:mt-0">
-                  <dt className="order-2 mt-2 text-lg font-medium leading-6 text-slate-200">Premier live</dt>
-                  <dd className="font-serif order-1 text-2xl lg:text-3xl font-bold tracking-tight text-slate-200">03/11/2020</dd>
-                </div>
-              </dl>
+              <div className="mt-4 lg:mt-20 mx-auto max-w-3xl">
+                <Image className="h-full w-full rounded-3xl lg:hover:scale-125 planning-png" src={planning} alt="" />
+              </div>
             </div>
-          </div>
-        </div>
-        {/* replay */}
-        <div id='replays' className="h-screen w-screen bg-replay bg-cover font-nature">
-          <div className="mx-auto max-w-7xl py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
-            <p className="text-center text-4xl font-semibold text-slate-200">Mes derniers streams</p>
-            <div className="flex items-center flex-col mt-6 lg:mt-8 font-sans">
-              {lastVideos && lastVideos.map((el, index) => (
-                <a key={index} href={el.url} target="_blank" rel="noreferrer" className="opacity-90 w-full my-4 flex flex-row md:items-center bg-white rounded-lg border shadow-md md:flex-row md:w-3/4 hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
-                  <Image className="opacity-100 sd:object-cover h-auto w-36 rounded-t-lg rounded-bl-lg md:h-auto md:w-48 md:rounded-none md:rounded-l-lg" src={el.image_url} width={800} height={800} alt="" />
-                  <div className="flex flex-col justify-between p-4 leading-normal">
-                    <h5 className="mb-2 md:text-xl font-bold tracking-tight text-gray-900 dark:text-white">{el.title}</h5>
-                    <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Publié le : {transformDateToFr(el.published_at)}</p>
+            {/* stats */}
+            <div id="stat" className="h-1/2 sd:h-1/3">
+              <div className="mx-auto px-4 sm:py-1 sm:px-6 lg:px-8">
+                <div className="mx-auto max-w-4xl text-center">
+                  <h2 className="text-xl font-bold tracking-tight text-white sm:text-3xl">Le stream en chiffre !</h2>
+                </div>
+                <dl className="mt-10 text-center sm:mx-auto sm:grid sm:max-w-3xl sm:grid-cols-3 sm:gap-8">
+                  <div className="flex flex-col">
+                    <dt className="order-2 mt-2 text-lg font-medium leading-6 text-slate-200">Nombre total de vue</dt>
+                    <dd className="font-serif order-1 text-2xl lg:text-3xl font-bold tracking-tight text-slate-200">{totalView}</dd>
                   </div>
-                </a>
-              ))}
+                  <div className="mt-10 flex flex-col sm:mt-0">
+                    <dt className="order-2 mt-2 text-lg font-medium leading-6 text-slate-200">Nombre total de followers</dt>
+                    <dd className="font-serif order-1 text-2xl lg:text-3xl font-bold tracking-tight text-slate-200">{totalFollower}</dd>
+                  </div>
+                  <div className="mt-10 flex flex-col sm:mt-0">
+                    <dt className="order-2 mt-2 text-lg font-medium leading-6 text-slate-200">Premier live</dt>
+                    <dd className="font-serif order-1 text-2xl lg:text-3xl font-bold tracking-tight text-slate-200">03/11/2020</dd>
+                  </div>
+                </dl>
+              </div>
             </div>
           </div>
-        </div>
-        {/* Modos */}
-        <div id="moderator" className="h-screen w-screen bg-cover bg-slate-900">
-          <div className="mx-auto py-12 px-4 text-center sm:px-6 lg:px-8 lg:py-24">
-            <div className="space-y-12">
-              <div className="space-y-5 sm:mx-auto sm:max-w-xl sm:space-y-4 lg:max-w-5xl">
-                <h2 className="text-3xl font-nature tracking-tight sm:text-4xl">Les modérateurs</h2>
+        }
+        {/* replay */}
+        {false &&
+          <div id='replays' className="h-screen w-screen bg-replay bg-cover font-nature">
+            <div className="mx-auto max-w-7xl py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
+              <p className="text-center text-4xl font-semibold text-slate-200">Mes derniers streams</p>
+              <div className="flex items-center flex-col mt-6 lg:mt-8 font-sans">
+                {lastVideos && lastVideos.map((el, index) => (
+                  <a key={index} href={el.url} target="_blank" rel="noreferrer" className="opacity-90 w-full my-4 flex flex-row md:items-center bg-white rounded-lg border shadow-md md:flex-row md:w-3/4 hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+                    <Image className="opacity-100 sd:object-cover h-auto w-36 rounded-t-lg rounded-bl-lg md:h-auto md:w-48 md:rounded-none md:rounded-l-lg" src={el.image_url} width={800} height={800} alt="" />
+                    <div className="flex flex-col justify-between p-4 leading-normal">
+                      <h5 className="mb-2 md:text-xl font-bold tracking-tight text-gray-900 dark:text-white">{el.title}</h5>
+                      <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Publié le : {transformDateToFr(el.published_at)}</p>
+                    </div>
+                  </a>
+                ))}
               </div>
-              <ul role="list" className="mx-auto grid grid-cols-2 sm:gap-16 lg:max-w-5xl lg:grid-cols-3">
-                {moderators.map((moderator, index) => (
-                  <li key={index} className='mt-12'>
-                    <div className="space-y-6">
-                      <Image className="mx-auto h-20 sm:h-40 w-20 sm:w-40 rounded-full" src={moderator.avatar} alt="" />
-                      <div className="space-y-2">
-                        <div className="space-y-1 font-nature text-xl sd:text-3xl font-medium leading-6">
-                          <h3>{moderator.name}</h3>
+            </div>
+          </div>
+        }
+        {/* Modos */}
+        {false &&
+          <div id="moderator" className="h-screen w-screen bg-cover bg-slate-900">
+            <div className="mx-auto py-12 px-4 text-center sm:px-6 lg:px-8 lg:py-24">
+              <div className="space-y-12">
+                <div className="space-y-5 sm:mx-auto sm:max-w-xl sm:space-y-4 lg:max-w-5xl">
+                  <h2 className="text-3xl font-nature tracking-tight sm:text-4xl">Les modérateurs</h2>
+                </div>
+                <ul role="list" className="mx-auto grid grid-cols-2 sm:gap-16 lg:max-w-5xl lg:grid-cols-3">
+                  {moderators.map((moderator, index) => (
+                    <li key={index} className='mt-12'>
+                      <div className="space-y-6">
+                        <Image className="mx-auto h-20 sm:h-40 w-20 sm:w-40 rounded-full" src={moderator.avatar} alt="" />
+                        <div className="space-y-2">
+                          <div className="space-y-1 font-nature text-xl sd:text-3xl font-medium leading-6">
+                            <h3>{moderator.name}</h3>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  </li>
-                ))}
-              </ul>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
-          </div>
 
-        </div>
+          </div>
+        }
       </main >
       <footer className="bg-slate-900 font-nature">
         <div className="mx-auto max-w-7xl py-4 px-2 sm:px-4 md:flex md:items-center md:justify-between lg:px-6">
