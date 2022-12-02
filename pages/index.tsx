@@ -123,8 +123,8 @@ const Home: NextPage = () => {
       <main className="mx-auto">
         {/* home */}
         <div className="text-center relative w-screen h-screen font-nature">
-          <video className='w-full h-full object-cover 2xl:object-fill' autoPlay muted loop>
-            <source src='/w3fhd.mp4' />
+          <video className='w-full h-full object-cover 2xl:object-fill' autoPlay muted>
+            <source src='/bw1.mp4' />
           </video>
           <div className='absolute top-0 left-0 w-full h-full'>
             <div className='h-full flex flex-col justify-center items-center'>
@@ -186,43 +186,39 @@ const Home: NextPage = () => {
           </div>
         </div>
         {/* stats and planning */}
-        <div id='the-stream' className='font-nature bg-twitch bg-cover bg-no-repeat h-screen w-screen'>
+        <div id='the-stream' className='font-christmas bg-c2 bg-cover bg-no-repeat h-screen w-screen'>
           {/* planning */}
           <div id="planning" className="mx-auto py-4 px-4 sm:px-6 lg:px-8 sd:h-1/2">
             <div className="mx-auto max-w-4xl text-center">
-              <h2 className="text-3xl pt-10 font-bold tracking-wide text-white sm:text-4xl">Planning</h2>
+              <h2 className="text-8xl pt-4 tracking-wide neonText">Planning</h2>
             </div>
-            <div className="mt-4 lg:mt-20 mx-auto max-w-3xl">
-              <Image className="h-full w-full rounded-3xl lg:hover:scale-130 planning-png" src={planning} alt="" />
+            <div className="mt-4 lg:mt-4 mx-auto max-w-3xl">
+              <Image className="h-full w-full rounded-3xl planning-png" src={planning} alt="" />
             </div>
           </div>
           {/* stats */}
           <div id="stat" className="h-1/2 sd:h-1/3">
             <div className="mx-auto px-4 sm:py-1 sm:px-6 lg:px-8">
               <div className="mx-auto max-w-4xl text-center">
-                <h2 className="text-xl font-bold tracking-wide text-white sm:text-3xl">Le stream en chiffres !</h2>
+                <h2 className="text-5xl tracking-wide neonText">Le stream en chiffres</h2>
               </div>
-              <dl className="mt-10 text-center sm:mx-auto sm:grid sm:max-w-3xl sm:grid-cols-3 sm:gap-8">
-                <div className="flex flex-col">
-                  <dt className="order-2 mt-2 text-lg font-medium leading-6 text-slate-200">Nombre total de vues</dt>
-                  <dd className="font-serif order-1 text-2xl lg:text-3xl font-bold tracking-wide text-slate-200">{totalView}</dd>
+              <dl className="mt-10 text-center sm:mx-auto sm:grid sm:max-w-3xl sm:grid-cols-2 sm:gap-8">
+                <div className="mt-10 flex flex-col sm:mt-0">
+                  <dt className="order-2 mt-2 text-4xl font-medium leading-6 neonText ">Nombre total de followers</dt>
+                  <dd className="font-serif order-1 text-2xl font-bold tracking-wide neonText ">{totalFollower}</dd>
                 </div>
                 <div className="mt-10 flex flex-col sm:mt-0">
-                  <dt className="order-2 mt-2 text-lg font-medium leading-6 text-slate-200">Nombre total de followers</dt>
-                  <dd className="font-serif order-1 text-2xl lg:text-3xl font-bold tracking-wide text-slate-200">{totalFollower}</dd>
-                </div>
-                <div className="mt-10 flex flex-col sm:mt-0">
-                  <dt className="order-2 mt-2 text-lg font-medium leading-6 text-slate-200">Premier live</dt>
-                  <dd className="font-serif order-1 text-2xl lg:text-3xl font-bold tracking-wide text-slate-200">03/11/2020</dd>
+                  <dt className="order-2 mt-2 text-4xl font-medium leading-6 neonText ">Premier live</dt>
+                  <dd className="font-serif order-1 text-2xl font-bold tracking-wide neonText">03/11/2020</dd>
                 </div>
               </dl>
             </div>
           </div>
         </div>
         {/* replay */}
-        <div id='replays' className="h-screen w-screen bg-replay bg-cover font-nature">
+        <div id='replays' className="h-screen w-screen bg-c1 bg-cover">
           <div className="mx-auto max-w-7xl py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
-            <p className="text-center text-4xl font-semibold text-slate-200">Mes derniers streams</p>
+            <p className="text-center text-8xl text-white neonTextGreen font-christmas">Mes derniers streams</p>
             <div className="flex items-center flex-col mt-6 lg:mt-8 font-sans">
               {lastVideos && lastVideos.map((el, index) => (
                 <a key={index} href={el.url} target="_blank" rel="noreferrer" className="opacity-90 w-full my-4 flex flex-row md:items-center bg-white rounded-lg border shadow-md md:flex-row md:w-3/4 hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
@@ -237,11 +233,11 @@ const Home: NextPage = () => {
           </div>
         </div>
         {/* Modos */}
-        <div id="moderator" className="h-screen w-screen bg-cover bg-slate-900 font-neon">
+        <div id="moderator" className="h-screen w-screen bg-cover bg-c3 font-christmas">
           <div className="mx-auto py-12 px-4 text-center sm:px-6 lg:px-8 lg:py-24">
             <div className="space-y-12">
               <div className="space-y-5 sm:mx-auto sm:max-w-xl sm:space-y-4 lg:max-w-5xl">
-                <h2 className="text-3xl sm:text-6xl neonText">Les modérateurs</h2>
+                <h2 className="text-8xl neonTextRed">Les moderateurs</h2>
               </div>
               <ul role="list" className="mx-auto grid grid-cols-3 sm:gap-16 lg:max-w-5xl lg:grid-cols-3">
                 {moderators.map((moderator, index) => (
@@ -249,7 +245,7 @@ const Home: NextPage = () => {
                     <div className="space-y-6">
                       <Image className="mx-auto h-20 sm:h-40 w-20 sm:w-40 rounded-full" src={moderator.avatar} alt="" />
                       <div className="space-y-2">
-                        <div className="space-y-1 text-3xl sd:text-3xl font-medium leading-6 neonText">
+                        <div className="space-y-1 text-5xl sd:text-6xl font-medium leading-6 neonTextRed">
                           <h3>{moderator.name}</h3>
                         </div>
                       </div>

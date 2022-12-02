@@ -31,6 +31,16 @@ a {
   text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #FFA500, 0 0 20px #FFA500, 0 0 25px #FFA500, 0 0 30px #FFA500, 0 0 35px #FFA500;
 }
 
+.neonTextRed {
+  color: #fff;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #e70b0b, 0 0 20px #e70b0b, 0 0 25px #e70b0b, 0 0 30px #e70b0b, 0 0 35px #e70b0b;
+}
+
+.neonTextGreen {
+  color: #fff;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #30af3d, 0 0 20px #30af3d, 0 0 25px #30af3d, 0 0 30px #30af3d, 0 0 35px #30af3d;
+}
+
 .heartbeat {
   -webkit-animation: heartbeat 1.5s ease-in-out infinite both;
   animation: heartbeat 1.5s ease-in-out infinite both
@@ -141,6 +151,11 @@ a {
 @font-face {
   font-family: "Neon";
   src: url("/neon.ttf");
+}
+
+@font-face {
+  font-family: "Christmas";
+  src: url("/christmas.otf");
 }
 
 .transform-fade-down-enter-active,

@@ -11,13 +11,16 @@ module.exports = {
         'tavern': "url('../images/background/tavern.png')",
         'replay': "url('../images/background/replay1.gif')",
         'twitch': "url('../images/background/twitch.jpeg')",
-        'twitch-gif': "url('../images/background/twitch.gif')"
+        'c1': "url('../images/background/christmas1.jpg')",
+        'c2': "url('../images/background/christmas2.jpeg')",
+        'c3': "url('../images/background/christmas3.jpeg')",
       },
       fontFamily: {
         basic: ['Basic'],
         twitch: ['Twitch'],
         nature: ['Nature'],
-        neon: ['Neon']
+        neon: ['Neon'],
+        christmas: ['Christmas'],
       },
       scale: {
         '130': '1.30',
