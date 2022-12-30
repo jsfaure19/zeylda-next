@@ -193,7 +193,7 @@ const Home: NextPage = () => {
               <h2 className="text-8xl pt-4 tracking-wide neonText">Planning</h2>
             </div>
             <div className="mt-4 lg:mt-4 mx-auto max-w-3xl">
-              <Image className="h-full w-full rounded-3xl planning-png" src={planning} alt="" />
+              <Image className=" h-96 w-full rounded-3xl planning-png " src={planning} alt="" />
             </div>
           </div>
           {/* stats */}
