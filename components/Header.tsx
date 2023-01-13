@@ -17,9 +17,9 @@ export function Header() {
         <div className="flex flex-wrap space-x-2 sm:hidden nav-items mt-6">
           {navigation.map((link, index) => {
             if (link.name === 'Wishlist') {
-              return <a key={index} href={link.to} target='_blank' rel="noreferrer" className='cursor-pointer nav-item text-sm font-medium text-slate-200 hover:text-slate-800'>{link.name}</a>
+              return <a key={index} href={link.to} target='_blank' rel="noreferrer" className='cursor-pointer nav-item text-sm font-medium text-slate-200 hover:underline'>{link.name}</a>
             } else {
-              return <Link key={link.name} className="text-sm cursor-pointer nav-item mb-2 font-medium text-slate-200 hover:text-indigo-600"
+              return <Link key={link.name} className="text-sm cursor-pointer nav-item mb-2 font-medium text-slate-200 hover:underline"
                 to={link.to}
                 spy={true}
                 smooth={true}
@@ -37,9 +37,9 @@ export function Header() {
             <div className="ml-10 hidden space-x-8 sm:block nav-items">
               {navigation.map((link, index) => {
                 if (link.name === 'Wishlist') {
-                  return <a key={index} href={link.to} target='_blank' rel="noreferrer" className='cursor-pointer nav-item text-2xl font-medium text-slate-200 hover:text-slate-800'>{link.name}</a>
+                  return <a key={index} href={link.to} target='_blank' rel="noreferrer" className='cursor-pointer nav-item text-2xl font-medium text-slate-200 hover:underline'>{link.name}</a>
                 } else {
-                  return <Link key={index} className="cursor-pointer nav-item text-2xl font-medium text-slate-200 hover:text-slate-800"
+                  return <Link key={index} className="cursor-pointer nav-item text-2xl font-medium text-slate-200 hover:underline"
                     to={link.to}
                     spy={true}
                     smooth={true}
