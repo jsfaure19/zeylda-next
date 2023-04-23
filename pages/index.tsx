@@ -176,14 +176,14 @@ const Home: NextPage = () => {
           {/* stats and planning */}
           <div id='the-stream' className='font-nature mt-10 sm:mt-40 w-screen'>
             {/* planning */}
-            <div id="planning" className="mx-auto py-4 px-4 sm:px-6 lg:px-8 hd-1/2 sd:h-2/3">
+            {/* <div id="planning" className="mx-auto py-4 px-4 sm:px-6 lg:px-8 hd-1/2 sd:h-2/3">
               <div className="mx-auto max-w-4xl text-center">
                 <h2 className="text-3xl pt-10 font-bold tracking-wide text-white sm:text-4xl">Planning</h2>
               </div>
               <div className="mt-4 lg:mt-20 mx-auto max-w-3xl">
                 <Image className="h-full w-full rounded-3xl planning-png" src={planning} alt="" />
               </div>
-            </div>
+            </div> */}
             {/* stats */}
             <div id="stat" className="h-1/2 sd:h-1/3">
               <div className="mx-auto px-4 sm:py-1 sm:px-6 lg:px-8">
