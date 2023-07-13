@@ -1,7 +1,5 @@
 import type { NextPage } from 'next'
 import Image from 'next/future/image'
-import planning from '../images/planning.png'
-import { Link, animateScroll as scroll } from "react-scroll";
 import axios from 'axios'
 import { useState, useEffect } from 'react'
 import { Header } from '../components/Header'
