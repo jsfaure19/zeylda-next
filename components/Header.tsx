@@ -11,8 +11,8 @@ const navigation = [
 export function Header() {
 
   return (
-    <header className="">
-      <nav className="px-4 sm:px-6 lg:px-8" aria-label="Top">
+    <header className="p-2">
+      <nav className="neonText px-4 sm:px-6 lg:px-8" aria-label="Top">
         <div className="flex flex-wrap space-x-2 sm:hidden nav-items mt-6">
           {navigation.map((link, index) => {
             if (link.name === 'Wishlist') {

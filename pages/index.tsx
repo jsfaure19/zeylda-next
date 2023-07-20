@@ -35,6 +35,7 @@ const Home: NextPage = () => {
     { icon: "ri-twitter-fill", href: "https://twitter.com/ZeyldaStream", title: 'Twitter', color: 'bg-blue-400' },
     { icon: "ri-instagram-fill", href: "https://www.instagram.com/zeylda13", title: 'Instagram', color: 'bg-pink-700' },
     { icon: "ri-youtube-fill", href: "https://www.youtube.com/channel/UCQnE0xuiOMGw95tZrNOdzsw", title: 'Youtube', color: 'bg-red-600' },
+    { icon: "ri-discord-fill", href: "https://discord.com/invite/cVKwp928VA", title: 'Discord', color: 'bg-indigo-700' }
   ]
   const moderators = [
     { name: "Petitsablet", avatar: require('../images/moderators/sabli.gif') },
@@ -119,7 +120,7 @@ const Home: NextPage = () => {
         {/* background */}
         <div className="text-center fixed w-screen h-screen font-nature">
           <video className='w-full h-full object-cover 2xl:object-fill' autoPlay muted loop>
-            <source src='/Cozy_Hut.mp4' />
+            <source src='EnchantedRetreat.mp4' />
           </video>
         </div>
         <div className='absolute '>
@@ -127,7 +128,7 @@ const Home: NextPage = () => {
           <div className='w-screen mt-20 sm:mt-64 font-nature'>
             <div className='w-full h-full'>
               <div className='h-full flex flex-col justify-center items-center'>
-                <div className='bg-slate-700 bg-opacity-80 rounded-3xl py-4 lg:py-8 px-4 my-4'>
+                <div className='bg-green-700 bg-opacity-80 rounded-3xl py-4 lg:py-8 px-4 my-4'>
                   <h1 className="text-xl sm:text-4xl lg:text-5xl font-bold tracking-wide text-gray-900 ">
                     <span className="block xl:inline text-slate-200 tracking-wide">Hellooooow ! </span>
                     <span className="block text-slate-200 xl:inline tracking-wide">Bienvenue dans la taverne !</span>
@@ -184,11 +185,11 @@ const Home: NextPage = () => {
             </div> */}
             {/* stats */}
             <div id="stat" className="h-1/2 sd:h-1/3">
-              <div className="mx-auto px-4 sm:py-1 sm:px-6 lg:px-8">
+              <div className="mx-auto px-4 sm:py-1 sm:px-6 lg:px-8 ">
                 <div className="mx-auto max-w-4xl text-center">
-                  <h2 className="text-xl font-bold tracking-wide text-white sm:text-3xl">Le stream en chiffres !</h2>
+                  <h2 className="text-2xl font-bold tracking-wide neonText sm:text-4xl">Le stream en chiffres !</h2>
                 </div>
-                <dl className="mt-10 text-center sm:mx-auto sm:grid sm:max-w-3xl sm:grid-cols-3 sm:gap-8">
+                <dl className="mt-10 text-center sm:mx-auto sm:grid sm:max-w-3xl sm:grid-cols-3 sm:gap-8 bg-green-700 bg-opacity-80 rounded-xl p-2">
                   <div className="flex flex-col">
                     <dt className="order-2 mt-2 text-lg font-medium leading-6 text-slate-200">Heures regardées</dt>
                     <dd className="font-serif order-1 text-2xl lg:text-3xl font-bold tracking-wide text-slate-200">{hoursWatched}</dd>
@@ -208,10 +209,10 @@ const Home: NextPage = () => {
           {/* replay */}
           <div id='replays' className=" w-screen mt-10 sm:mt-40 font-nature">
             <div className="mx-auto max-w-7xl py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
-              <p className="text-center text-4xl font-semibold text-slate-200">Mes derniers streams</p>
+              <p className="text-center text-2xl sm:text-4xl font-semibold  neonText">Mes derniers streams</p>
               <div className="flex items-center flex-col mt-6 lg:mt-8 font-sans">
                 {lastVideos && lastVideos.map((el, index) => (
-                  <a key={index} href={el.url} target="_blank" rel="noreferrer" className="opacity-90 w-full my-4 flex flex-row md:items-center bg-white rounded-lg border shadow-md md:flex-row md:w-3/4 hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+                  <a key={index} href={el.url} target="_blank" rel="noreferrer" className="opacity-90 w-full my-4 flex flex-row md:items-center bg-green-800 rounded-lg border shadow-md md:flex-row md:w-3/4 hover:bg-gray-100 dark:border-green-700 dark:bg-green-800 dark:hover:bg-green-700">
                     <Image className="opacity-100 sd:object-cover h-auto w-36 rounded-t-lg rounded-bl-lg md:h-auto md:w-48 md:rounded-none md:rounded-l-lg" src={el.image_url} width={800} height={800} alt="" />
                     <div className="flex flex-col justify-between p-4 leading-normal">
                       <h5 className="mb-2 md:text-xl font-bold tracking-wide text-gray-900 dark:text-white">{el.title}</h5>
@@ -223,11 +224,11 @@ const Home: NextPage = () => {
             </div>
           </div>
           {/* Modos */}
-          <div id="moderator" className=" w-screen mt-10 sm:mt-40 font-neon">
+          <div id="moderator" className=" w-screen mt-10 sm:mt-40 font-nature">
             <div className="mx-auto py-12 px-4 text-center sm:px-6 lg:px-8 lg:py-24">
               <div className="space-y-12">
                 <div className="space-y-5 sm:mx-auto sm:max-w-xl sm:space-y-4 lg:max-w-5xl">
-                  <h2 className="text-3xl sm:text-6xl neonText">Les modérateurs</h2>
+                  <h2 className="text-2xl sm:text-4xl neonText">Les modos</h2>
                 </div>
                 <ul role="list" className="mx-auto grid grid-cols-3 sm:gap-16 lg:max-w-5xl lg:grid-cols-3">
                   {moderators.map((moderator, index) => (
