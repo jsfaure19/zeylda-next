@@ -35,14 +35,14 @@ const Home: NextPage = () => {
     { icon: "ri-twitter-fill", href: "https://twitter.com/ZeyldaStream", title: 'Twitter', color: 'bg-blue-400' },
     { icon: "ri-instagram-fill", href: "https://www.instagram.com/zeylda13", title: 'Instagram', color: 'bg-pink-700' },
     { icon: "ri-youtube-fill", href: "https://www.youtube.com/channel/UCQnE0xuiOMGw95tZrNOdzsw", title: 'Youtube', color: 'bg-red-600' },
-    { icon: "ri-discord-fill", href: "https://discord.com/invite/cVKwp928VA", title: 'Discord', color: 'bg-indigo-700' }
+    { icon: "ri-discord-fill", href: "https://discord.com/invite/cVKwp928VA", title: 'Discord', color: 'bg-indigo-700' },
+    { icon: "ri-tiktok-fill", href: "https://www.tiktok.com/@zeyldastream", title: 'Tiktok', color: 'bg-pink-500'}
   ]
   const moderators = [
     { name: "Petitsablet", avatar: require('../images/moderators/sabli.gif') },
-    { name: "Jahno", avatar: require('../images/moderators/korin.gif') },
+    { name: "Jahno", avatar: require('../images/moderators/geng.gif') },
     { name: "Fafafox", avatar: require('../images/moderators/fafa.gif') },
-    { name: "Devilman", avatar: require('../images/moderators/devil.jpg') },
-    { name: "Cailloux", avatar: require('../images/moderators/cailloux.gif') },
+    { name: "Devilman", avatar: require('../images/moderators/devil.gif') },
   ]
   const [status, setStatus] = useState<string>('offline')
   const [totalFollower, setTotalFollower] = useState<string>('en cours de calcul')
@@ -142,7 +142,7 @@ const Home: NextPage = () => {
                     <br />
                     Je stream en général cinq fois par semaine.
                   </p>
-                  <div className="mx-auto mt-5 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 sm:justify-center md:mt-8">
+                  <div className="mx-auto mt-5 grid grid-cols-2 sm:grid-cols-3 sm:justify-center md:mt-8">
                     {socialNetworks.map((sn, index) => (
                       <div key={index} className="mx-2 my-2 rounded-md sd:shadow">
                         <a href={sn.href} target="_blank" rel="noreferrer" className='justify-center heartbeat'>
