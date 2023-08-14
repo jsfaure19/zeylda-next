@@ -133,7 +133,7 @@ const Home: NextPage = () => {
                     <span className="block xl:inline text-slate-200 tracking-wide">Hellooooow ! </span>
                     <span className="block text-slate-200 xl:inline tracking-wide">Bienvenue dans la taverne !</span>
                   </h1>
-                  <p className="text-start mx-auto font-basic mt-3 max-w-md text-lg sm:text-xl text-slate-200 md:mt-5 md:max-w-4xl lg:text-2xl">
+                  <p className=" text-justify mx-auto font-basic mt-3 max-w-md text-lg sm:text-xl text-slate-200 md:mt-5 md:max-w-4xl lg:text-2xl">
                     Je suis Zeylda, passionnée par les jeux vidéos depuis le plus jeune age. J&apos;aime partager mon univers, qui est fait de fantaisie, d&apos;humour, de bonne humeur et d&apos;un brin de folie
                     <br />
                     Mon rêve est de pouvoir streamer à plein temps, et je compte bien y arriver !
@@ -142,7 +142,7 @@ const Home: NextPage = () => {
                     <br />
                     Je stream en général cinq fois par semaine.
                   </p>
-                  <div className="mx-auto mt-5 grid grid-cols-2 sm:grid-cols-3 sm:justify-center md:mt-8">
+                  <div className="mx-auto mt-5 grid grid-cols-2 sm:grid-cols-3 sm:justify-items-center md:mt-8">
                     {socialNetworks.map((sn, index) => (
                       <div key={index} className="mx-2 my-2 rounded-md sd:shadow">
                         <a href={sn.href} target="_blank" rel="noreferrer" className='justify-center heartbeat'>
