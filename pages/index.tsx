@@ -74,7 +74,7 @@ const Home: NextPage = () => {
           })
 
         // get streamer total follower
-        await api.get('https://api.twitch.tv/helix/users/follows?to_id=421475350')
+        await api.get('https://api.twitch.tv/helix/channels/followers?broadcaster_id=421475350')
           .then(response => {
             setTotalFollower(response.data.total)
           })
