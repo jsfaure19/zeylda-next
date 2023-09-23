@@ -1,10 +1,28 @@
 /** @type {import('tailwindcss').Config} */
+const colors = require('tailwindcss/colors')
 module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}"
   ],
   theme: {
+    colors: {
+      transparent: 'transparent',
+      current: 'currentColor',
+      'main': '#FFA07A',
+      'black': colors.black,
+      'white': colors.white,
+      'gray': colors.gray,
+      'emerald': colors.emerald,
+      'indigo': colors.indigo,
+      'yellow': colors.yellow,
+      'green': colors.green,
+      'red': colors.red,
+      'blue': colors.blue,
+      'purple': colors.purple,
+      'pink': colors.pink,
+      'slate': colors.slate,
+    },
     extend: {
       backgroundImage: {
         'tb': "url('../images/background/tavern_brawl.png')",

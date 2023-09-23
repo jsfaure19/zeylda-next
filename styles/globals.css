@@ -28,7 +28,7 @@ a {
 
 .neonText {
   color: #fff;
-  text-shadow: 0 0 5px 	#708090, 0 0 10px 	#708090, 0 0 15px #3C7E44, 0 0 20px #3C7E44, 0 0 25px #3C7E44, 0 0 30px #3C7E44, 0 0 35px #3C7E44;
+  text-shadow: 0 0 5px 	#708090, 0 0 10px 	#708090, 0 0 15px #FFA07A, 0 0 20px #FFA07A, 0 0 25px #FFA07A, 0 0 30px #FFA07A, 0 0 35px #FFA07A;
 }
 
 .heartbeat {

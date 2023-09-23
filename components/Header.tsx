@@ -1,5 +1,5 @@
 import Image from 'next/future/image'
-import navy from "../public/navy.png";
+import pumpkin from "../public/pumpkin.png";
 import { Link, animateScroll as scroll } from "react-scroll";
 const navigation = [
   { name: 'Home', to: '/' },
@@ -31,7 +31,7 @@ export function Header() {
           <div className="sm:flex items-center hidden">
             <div>
               <span className="sr-only">La taverne de Zeylda</span>
-              <Image className="h-10 w-auto" src={navy} alt="" />
+              {/* <Image className="h-10 w-auto" src={pumpkin} alt="" /> */}
             </div>
             <div className="ml-10 hidden space-x-8 sm:block nav-items">
               {navigation.map((link, index) => {

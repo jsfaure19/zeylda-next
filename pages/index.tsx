@@ -120,7 +120,7 @@ const Home: NextPage = () => {
         {/* background */}
         <div className="text-center fixed w-screen h-screen font-nature">
           <video className='w-full h-full object-cover 2xl:object-fill' autoPlay muted loop>
-            <source src='EnchantedRetreat.mp4' />
+            <source src='RosemarysCottage.mp4' />
           </video>
         </div>
         <div className='absolute '>
@@ -128,7 +128,7 @@ const Home: NextPage = () => {
           <div className='w-screen mt-20 sm:mt-64 font-nature'>
             <div className='w-full h-full'>
               <div className='h-full flex flex-col justify-center items-center'>
-                <div className='bg-green-700 bg-opacity-80 rounded-3xl py-4 lg:py-8 px-4 my-4'>
+                <div className='bg-main bg-opacity-80 rounded-3xl py-4 lg:py-8 px-4 my-4'>
                   <h1 className="text-xl sm:text-4xl lg:text-5xl font-bold tracking-wide text-gray-900 ">
                     <span className="block xl:inline text-slate-200 tracking-wide">Hellooooow ! </span>
                     <span className="block text-slate-200 xl:inline tracking-wide">Bienvenue dans la taverne !</span>
@@ -189,7 +189,7 @@ const Home: NextPage = () => {
                 <div className="mx-auto max-w-4xl text-center">
                   <h2 className="text-2xl font-bold tracking-wide neonText sm:text-4xl">Le stream en chiffres !</h2>
                 </div>
-                <dl className="mt-10 text-center sm:mx-auto sm:grid sm:max-w-3xl sm:grid-cols-3 sm:gap-8 bg-green-700 bg-opacity-80 rounded-xl p-2">
+                <dl className="mt-10 text-center sm:mx-auto sm:grid sm:max-w-3xl sm:grid-cols-3 sm:gap-8 bg-main bg-opacity-80 rounded-xl p-2">
                   <div className="flex flex-col">
                     <dt className="order-2 mt-2 text-lg font-medium leading-6 text-slate-200">Heures regardées</dt>
                     <dd className="font-serif order-1 text-2xl lg:text-3xl font-bold tracking-wide text-slate-200">{hoursWatched}</dd>
@@ -212,7 +212,7 @@ const Home: NextPage = () => {
               <p className="text-center text-2xl sm:text-4xl font-semibold  neonText">Mes derniers streams</p>
               <div className="flex items-center flex-col mt-6 lg:mt-8 font-sans">
                 {lastVideos && lastVideos.map((el, index) => (
-                  <a key={index} href={el.url} target="_blank" rel="noreferrer" className="opacity-90 w-full my-4 flex flex-row md:items-center bg-green-800 rounded-lg border shadow-md md:flex-row md:w-3/4 hover:bg-gray-100 dark:border-green-700 dark:bg-green-800 dark:hover:bg-green-700">
+                  <a key={index} href={el.url} target="_blank" rel="noreferrer" className="opacity-90 w-full my-4 flex flex-row md:items-center bg-main rounded-lg border shadow-md md:flex-row md:w-3/4 hover:bg-gray-100 dark:border-main dark:bg-main dark:hover:bg-main">
                     <Image className="opacity-100 sd:object-cover h-auto w-36 rounded-t-lg rounded-bl-lg md:h-auto md:w-48 md:rounded-none md:rounded-l-lg" src={el.image_url} width={800} height={800} alt="" />
                     <div className="flex flex-col justify-between p-4 leading-normal">
                       <h5 className="mb-2 md:text-xl font-bold tracking-wide text-gray-900 dark:text-white">{el.title}</h5>
@@ -230,7 +230,7 @@ const Home: NextPage = () => {
                 <div className="space-y-5 sm:mx-auto sm:max-w-xl sm:space-y-4 lg:max-w-5xl">
                   <h2 className="text-2xl sm:text-4xl neonText">Les modos</h2>
                 </div>
-                <ul role="list" className="mx-auto grid grid-cols-3 sm:gap-16 lg:max-w-5xl lg:grid-cols-3">
+                <ul role="list" className="mx-auto grid grid-cols-2 sm:gap-16 lg:max-w-5xl lg:grid-cols-4">
                   {moderators.map((moderator, index) => (
                     <li key={index} className='mt-5'>
                       <div className="space-y-6">
