@@ -120,7 +120,7 @@ const Home: NextPage = () => {
         {/* background */}
         <div className="text-center fixed w-screen h-screen font-nature">
           <video className='w-full h-full object-cover 2xl:object-fill' autoPlay muted loop>
-            <source src='RosemarysCottage.mp4' />
+            <source src='winter.mp4' />
           </video>
         </div>
         <div className='absolute '>
@@ -216,7 +216,7 @@ const Home: NextPage = () => {
                     <Image className="opacity-100 sd:object-cover h-auto w-36 rounded-t-lg rounded-bl-lg md:h-auto md:w-48 md:rounded-none md:rounded-l-lg" src={el.image_url} width={800} height={800} alt="" />
                     <div className="flex flex-col justify-between p-4 leading-normal">
                       <h5 className="mb-2 md:text-xl font-bold tracking-wide text-gray-900 dark:text-white">{el.title}</h5>
-                      <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Publié le : {transformDateToFr(el.published_at)}</p>
+                      <p className="mb-3 font-normal text-gray-200 dark:text-gray-100">Publié le : {transformDateToFr(el.published_at)}</p>
                     </div>
                   </a>
                 ))}
