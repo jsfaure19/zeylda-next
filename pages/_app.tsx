@@ -10,7 +10,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     <React.Fragment>
       <Head>
         <title>Zeylda Stream</title>
-        <link rel="icon" href="/winter.png" />
+        <link rel="icon" href="/navy.png" />
         <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet"></link>
       </Head>
       <div className=''>
